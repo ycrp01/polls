@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
 </head>
 <body>
 <h1>{{question.question_text}}</h1>
@@ -12,5 +14,7 @@
     {% endfor %}
 </ul>
 <a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+<br>
+<a href="{% url 'polls:index' %}">Back to Questions</a>
 </body>
 </html>

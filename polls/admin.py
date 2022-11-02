@@ -17,6 +17,7 @@ class QuestionAdmin(admin.ModelAdmin):
 
     list_filter = ['pub_date'] # filter side-bar 추가
     search_fields = ['question_text'] # search-box 추가
+
 # Register your models here.
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(Choice)
